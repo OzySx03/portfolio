@@ -194,3 +194,40 @@ window.addEventListener('load', () => {
 console.log('%c👋 Welcome to my portfolio!', 'color: #00D9FF; font-size: 20px; font-weight: bold;');
 console.log('%cInterested in the code? Check out the GitHub repo!', 'color: #B8C5D6; font-size: 14px;');
 console.log('%cBuilt with ❤️ in Istanbul', 'color: #8B9CAF; font-size: 12px;');
+
+
+// ===== SCROLL TO TOP BUTTON =====
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// ===== READING PROGRESS BAR =====
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+});
+
+// ===== CTA EVENT TRACKING (Google Analytics Ready) =====
+document.querySelectorAll('.btn, .btn-outline-small').forEach(button => {
+  button.addEventListener('click', () => {
+    const buttonText = button.textContent.trim();
+    console.log('CTA clicked:', buttonText);
+    // When Google Analytics is added, track with:
+    // gtag('event', 'cta_click', { 'button_text': buttonText });
+  });
+});
