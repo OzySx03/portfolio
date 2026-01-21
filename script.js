@@ -22,7 +22,7 @@ const navMenu = document.getElementById('navMenu');
 navToggle.addEventListener('click', () => {
   navMenu.classList.toggle('active');
   const icon = navToggle.querySelector('i');
-  
+
   if (navMenu.classList.contains('active')) {
     icon.classList.remove('fa-bars');
     icon.classList.add('fa-times');
@@ -47,14 +47,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('href');
-    
+
     if (targetId === '#') return;
-    
+
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       const navbarHeight = navbar.offsetHeight;
       const targetPosition = targetElement.offsetTop - navbarHeight;
-      
+
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth'
@@ -68,12 +68,12 @@ const sections = document.querySelectorAll('section[id]');
 
 function highlightNavLink() {
   const scrollPosition = window.scrollY + 100;
-  
+
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
     const sectionId = section.getAttribute('id');
-    
+
     if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
       navLinks.forEach(link => {
         link.classList.remove('active');
@@ -108,38 +108,8 @@ document.querySelectorAll('.fade-in').forEach(element => {
 });
 
 // ===== FORM SUBMISSION =====
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  // Get form data
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    subject: document.getElementById('subject').value,
-    message: document.getElementById('message').value
-  };
-  
-  // Simulate form submission (replace with actual backend integration)
-  console.log('Form submitted:', formData);
-  
-  // Show success message
-  const button = contactForm.querySelector('.form-button');
-  const originalText = button.innerHTML;
-  
-  button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-  button.style.background = 'linear-gradient(135deg, #00FF88 0%, #00CC66 100%)';
-  
-  // Reset form
-  contactForm.reset();
-  
-  // Reset button after 3 seconds
-  setTimeout(() => {
-    button.innerHTML = originalText;
-    button.style.background = '';
-  }, 3000);
-});
+// Form now uses FormSubmit.co service to send actual emails
+// No custom JavaScript needed - native form submission handles everything
 
 // ===== TYPING EFFECT FOR HERO (OPTIONAL ENHANCEMENT) =====
 // Uncomment to enable typing effect on hero title
@@ -183,7 +153,7 @@ document.addEventListener('mousemove', (e) => {
 window.addEventListener('scroll', () => {
   const scrolled = window.pageYOffset;
   const heroContent = document.querySelector('.hero-content');
-  
+
   if (heroContent && scrolled < window.innerHeight) {
     heroContent.style.transform = `translateY(${scrolled * 0.4}px)`;
     heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
@@ -194,11 +164,11 @@ window.addEventListener('scroll', () => {
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(card => {
-  card.addEventListener('mouseenter', function() {
+  card.addEventListener('mouseenter', function () {
     this.style.transform = 'translateY(-8px) scale(1.02)';
   });
-  
-  card.addEventListener('mouseleave', function() {
+
+  card.addEventListener('mouseleave', function () {
     this.style.transform = 'translateY(-8px) scale(1)';
   });
 });
@@ -213,7 +183,7 @@ expertiseCards.forEach((card, index) => {
 // ===== PAGE LOAD ANIMATION =====
 window.addEventListener('load', () => {
   document.body.style.opacity = '0';
-  
+
   setTimeout(() => {
     document.body.style.transition = 'opacity 0.5s ease-in';
     document.body.style.opacity = '1';

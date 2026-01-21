@@ -360,7 +360,14 @@
                 </p>
             </div>
 
-            <form class="contact-form fade-in" id="contactForm">
+            <form class="contact-form fade-in" id="contactForm"
+                action="https://formsubmit.co/ozanemreyildiz25@gmail.com" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+
                 <div class="form-group">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required>
@@ -374,7 +381,7 @@
 
                 <div class="form-group">
                     <label for="subject" class="form-label">Subject</label>
-                    <input type="text" id="subject" name="subject" class="form-input" placeholder="What's this about?"
+                    <input type="text" id="subject" name="_subject" class="form-input" placeholder="What's this about?"
                         required>
                 </div>
 
