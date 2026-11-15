@@ -1,445 +1,164 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Ozan Emre Yıldız - MIS Professional Portfolio. Bridging the Gap Between IT Infrastructure and Data Intelligence. IT Technical Support specialist and MIS student based in Istanbul.">
-    <meta name="keywords"
-        content="Ozan Emre Yıldız, MIS, IT Support, Data Analytics, Hardware, ITIL, Management Information Systems, Istanbul">
-    <meta name="author" content="Ozan Emre Yıldız">
-    <title>Ozan Emre Yıldız | MIS Professional - IT Infrastructure & Data Intelligence</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-
-        <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.ozanemreyildiz.com/">
-    <meta property="og:title" content="Ozan Emre Yıldız | IT Infrastructure Specialist">
-    <meta property="og:description" content="IT Support specialist. 50+ builds, 200+ assets managed, Hackathon winner.">
-    <meta property="og:image" content="https://www.ozanemreyildiz.com/images/profile.png">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ozan Emre Yıldız: IT support and small, practical software</title>
+  <meta name="description" content="Ozan Emre Yıldız is an MIS student and IT technical support specialist in Istanbul who builds self-hosted infrastructure, monitoring tools and privacy-minded web apps.">
+  <meta name="author" content="Ozan Emre Yıldız">
+  <link rel="canonical" href="https://www.ozanemreyildiz.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ozanemreyildiz.com/">
+  <meta property="og:title" content="Ozan Emre Yıldız">
+  <meta property="og:description" content="MIS student and IT support specialist in Istanbul. Self-hosted infrastructure, monitoring tools, privacy-minded web apps.">
+  <meta property="og:image" content="https://www.ozanemreyildiz.com/images/profile.jpg">
+  <meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23161614'/><text x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%23e8590c' text-anchor='middle'>oy</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 </head>
+<body>
+  <a class="skip" href="#work">Skip to content</a>
 
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Reading Progress Bar -->
-    <div class="reading-progress">
-        <div class="progress-bar" id="progressBar"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a href="#" class="mark" aria-label="Home">ozan<span>emre</span>yildiz</a>
+      <nav aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
+      </nav>
     </div>
+  </header>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">OEY</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#expertise" class="nav-link">Expertise</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#tech" class="nav-link">Tech Stack</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-graduation-cap"></i> MIS Student | Class of 2026
-                </div>
-                <h1 class="hero-title">Bridging the Gap Between IT Infrastructure and Data Intelligence</h1>
-                <p class="hero-subtitle">
-                    IT Technical Support specialist and MIS student based in Istanbul, passionate about optimizing
-                    systems
-                    and solving complex hardware/software challenges with a data-driven approach.
-                </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> View My Work
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Get In Touch
-                    </a>
-                </div>
-            </div>
-        </div>
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Istanbul · MIS, class of 2026</p>
+      <h1>I keep systems running, and I build <em>small, practical tools</em> around them.</h1>
+      <p class="lede">I'm Ozan Emre Yıldız. I study Management Information Systems and work in IT technical support. Outside of that I self-host my home network's infrastructure, write monitoring scripts in Python and build privacy-minded web apps.</p>
+      <div class="hero-links">
+        <a class="btn" href="#work">See the work</a>
+        <a class="link" href="mailto:ozanemreyildiz25@gmail.com">ozanemreyildiz25@gmail.com</a>
+      </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">About Me</span>
-                <h2 class="section-title">My Journey in Tech</h2>
-            </div>
+    <section id="work" class="wrap section">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p class="mono muted">2023–2026</p>
+      </div>
 
-            <div class="about-content fade-in">
-                <div class="about-image-wrapper">
-                    <img src="https://github.com/OzySx03.png" alt="Ozan Emre Yıldız - IT Professional" class="about-image" loading="lazy">
-                </div>
+      <ol class="projects">
+        <li class="project">
+          <div class="p-meta mono">
+            <span class="p-num">01</span>
+            <span>2026</span>
+            <span>Web app</span>
+          </div>
+          <div class="p-body">
+            <h3>WhisperLink</h3>
+            <p>A one-to-one chat you start by sharing a link. The Node.js server only creates nicknames and single-use invite links that expire after 24 hours, then helps the two browsers find each other. After that, messages and images go peer-to-peer over a WebRTC data channel, so the server never stores the conversation. It installs as a PWA, and ending a chat deletes the messages.</p>
+            <ul class="tags mono"><li>Node.js</li><li>Express</li><li>WebSocket</li><li>WebRTC</li><li>PWA</li></ul>
+            <a class="arrow" href="https://github.com/OzySx03/whisperlink" target="_blank" rel="noopener">Source on GitHub</a>
+          </div>
+        </li>
 
-                <div class="about-text">
-                    <h3>From Istanbul with Passion</h3>
-                    <p>
-                        Hi, I'm <strong>Ozan Emre Yıldız</strong> — a dedicated IT Technical Support specialist and
-                        Management Information Systems student graduating in 2026, based in Istanbul. I've successfully
-                        <strong>built and repaired 50+ high-performance PCs</strong>, reducing hardware failure rates
-                        through preventive diagnostics.
-                    </p>
-                    <p>
-                        At my current role, I manage <strong>200+ IT assets</strong> using ManageEngine AssetExplorer,
-                        cutting down average resolution time from 48h to 8h. Whether troubleshooting Ryzen platforms,
-                        developing ML models, or winning hackathons, I bring data-driven solutions to complex IT
-                        challenges.
-                    </p>
-                    <p>
-                        Beyond the technical realm, I'm continuously expanding my expertise in cloud technologies,
-                        data analytics, and emerging IT frameworks. I believe in lifelong learning and the power of
-                        technology to transform businesses and lives through efficient, scalable solutions.
-                    </p>
+        <li class="project">
+          <div class="p-meta mono">
+            <span class="p-num">02</span>
+            <span>2026</span>
+            <span>Automation</span>
+          </div>
+          <div class="p-body">
+            <h3>Amazon Depo Monitor</h3>
+            <p>A personal tracker for discounted iPhone listings on Amazon Warehouse. It finds listings from saved searches and product pages, normalizes and scores them, keeps state in SQLite and sends Telegram alerts with action buttons. A small FastAPI dashboard shows what it has seen. It's built to behave: per-domain rate limits, a safe mode that's on by default, saved HTML snapshots when a parser breaks, and no automated checkout. Buying stays a human decision.</p>
+            <ul class="tags mono"><li>Python 3.12</li><li>Playwright</li><li>FastAPI</li><li>SQLAlchemy</li><li>APScheduler</li><li>Telegram Bot API</li></ul>
+            <span class="note mono">Private repository</span>
+          </div>
+        </li>
 
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🎓</span>
-                            <span>MIS Student 2026</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🏙️</span>
-                            <span>Based in Istanbul</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">💼</span>
-                            <span>IT Technical Support</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">☁️</span>
-                            <span>Cloud & Data Enthusiast</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <li class="project">
+          <div class="p-meta mono">
+            <span class="p-num">03</span>
+            <span>2026</span>
+            <span>Infrastructure</span>
+          </div>
+          <div class="p-body">
+            <h3>Home network &amp; security lab</h3>
+            <p>Network-wide ad and tracker blocking for every device at home. AdGuard Home runs in Docker on a Mac with a static IP, the Keenetic router hands it out as the DNS server over DHCP, and upstream queries go out encrypted over DNS-over-HTTPS to Quad9. Next to it is a Kali Linux VM and an OWASP Juice Shop container that I use to practice web application security.</p>
+            <ul class="tags mono"><li>Docker</li><li>AdGuard Home</li><li>DNS / DHCP</li><li>DoH</li><li>Kali Linux</li><li>OWASP Juice Shop</li></ul>
+          </div>
+        </li>
+
+        <li class="project">
+          <div class="p-meta mono">
+            <span class="p-num">04</span>
+            <span>2025</span>
+            <span>Full stack</span>
+          </div>
+          <div class="p-body">
+            <h3>Todo Calendar</h3>
+            <p>A task list that lives on a calendar. You create, edit and complete tasks with due dates in a React and Material UI front end, backed by an Express REST API and MongoDB. It's set up to deploy on Render.</p>
+            <ul class="tags mono"><li>React</li><li>Material UI</li><li>Express</li><li>MongoDB</li></ul>
+            <a class="arrow" href="https://github.com/OzySx03/todo-calendar" target="_blank" rel="noopener">Source on GitHub</a>
+          </div>
+        </li>
+      </ol>
+
+      <div class="earlier">
+        <h3 class="mono muted">Earlier &amp; smaller</h3>
+        <ul>
+          <li><a href="https://github.com/OzySx03/Safe-Notepad" target="_blank" rel="noopener">Secure Notepad</a><span>A Tkinter notepad that encrypts notes with Fernet before saving them</span><span class="mono">2023 · Python</span></li>
+          <li><a href="https://github.com/OzySx03/Tkinter-Learning-" target="_blank" rel="noopener">Tkinter Learning</a><span>Notes, examples and mini-projects from learning Python GUIs</span><span class="mono">2024 · Python</span></li>
+        </ul>
+      </div>
     </section>
 
-    <!-- EXPERTISE SECTION -->
-    <section class="expertise" id="expertise">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Core Expertise</span>
-                <h2 class="section-title">What I Bring to the Table</h2>
-                <p class="section-description">
-                    A comprehensive skill set spanning IT infrastructure, data management, and emerging technologies
-                </p>
-            </div>
-
-            <div class="expertise-grid">
-                <!-- IT Service Management -->
-                <div class="expertise-card fade-in">
-                    <div class="expertise-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>IT Service Management</h3>
-                    <p>
-                        Proficient in ITSM frameworks with a focus on operational excellence and continuous improvement.
-                    </p>
-                    <ul>
-                        <li>ITIL 4 Framework Implementation</li>
-                        <li>Asset Lifecycle Management</li>
-                        <li>Service Desk Operations</li>
-                        <li>Incident & Problem Management</li>
-                    </ul>
-                </div>
-
-                <!-- Hardware & Infrastructure -->
-                <div class="expertise-card fade-in">
-                    <div class="expertise-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Hardware & Infrastructure</h3>
-                    <p>
-                        Deep technical expertise in PC building, hardware troubleshooting, and workstation optimization.
-                    </p>
-                    <ul>
-                        <li>PC/Laptop Building & Assembly</li>
-                        <li>Ryzen & MSI Platform Expertise</li>
-                        <li>Hardware Diagnostics & Repair</li>
-                        <li>Workstation Performance Tuning</li>
-                    </ul>
-                </div>
-
-                <!-- Data & Automation -->
-                <div class="expertise-card fade-in">
-                    <div class="expertise-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Data & Automation</h3>
-                    <p>
-                        Leveraging data and automation tools to streamline processes and drive informed decision-making.
-                    </p>
-                    <ul>
-                        <li>Advanced Excel & VBA Automation</li>
-                        <li>ManageEngine AssetExplorer</li>
-                        <li>Data Analysis & Reporting</li>
-                        <li>Process Optimization</li>
-                    </ul>
-                </div>
-
-                <!-- Emerging Technologies -->
-                <div class="expertise-card fade-in">
-                    <div class="expertise-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Emerging Tech</h3>
-                    <p>
-                        Exploring cutting-edge technologies in machine learning and mobile application development.
-                    </p>
-                    <ul>
-                        <li>Machine Learning Models</li>
-                        <li>Predictive Analytics</li>
-                        <li>Mobile App Development</li>
-                        <li>AI-Powered Solutions</li>
-                    </ul>
-                </div>
-            </div>
+    <section id="about" class="wrap section about">
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <figure class="portrait">
+          <img src="images/profile.jpg" width="720" height="720" alt="Portrait of Ozan Emre Yıldız" loading="lazy">
+        </figure>
+        <div class="about-text">
+          <p>I'm finishing a degree in Management Information Systems in Istanbul and graduating in 2026. Day to day I work in IT technical support: setting up and fixing hardware, looking after Windows machines, tracking assets and getting people working again.</p>
+          <p>That work taught me to automate the boring parts and write things down. Most of what I build starts with a problem I actually have, like a noisy network, a deal I don't want to miss or a chat that shouldn't sit on someone's server. I build PCs too, and I like knowing how a system works from the hardware up.</p>
+          <dl class="skills">
+            <div><dt class="mono">Support &amp; ops</dt><dd>Windows 11, hardware diagnostics, PC building, IT asset management, ITIL 4 practices</dd></div>
+            <div><dt class="mono">Infrastructure</dt><dd>Docker, Linux, DNS / DHCP, home networking</dd></div>
+            <div><dt class="mono">Code</dt><dd>Python, JavaScript / Node.js, React, SQL, Excel &amp; VBA</dd></div>
+          </dl>
         </div>
+      </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Featured Projects</span>
-                <h2 class="section-title">Recent Work & Innovations</h2>
-                <p class="section-description">
-                    A showcase of projects that demonstrate my technical skills and problem-solving abilities
-                </p>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project 1: Artisan -->
-                <div class="project-card fade-in">
-                    <img src="images/artisan-project.png" alt="Artisan AI Brand Generator App Interface"
-                        class="project-image" loading="lazy">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>"Artisan" AI Brand Identity Generator</h3>
-                            <span class="project-tag">Hackathon</span>
-                        </div>
-                        <p class="project-problem"><strong>📌 Problem:</strong> Small businesses spend $500-2000 and 2-3
-                            weeks on professional branding.</p>
-                        <p class="project-solution"><strong>⚙️ Solution:</strong> Built AI-powered mobile app for
-                            Adapty.io x Fal.ai hackathon generating complete brand identities in under 60 seconds.</p>
-                        <p class="project-result"><strong>✅ Result:</strong> 🏆 Won Hackathon (Top 3/50) • ⚡ 87% faster
-                            • ⭐ 4.5/5 rating from beta testers</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Flutter</span>
-                            <span class="tech-badge">Dart</span>
-                            <span class="tech-badge">Fal.ai API</span>
-                            <span class="tech-badge">Adapty SDK</span>
-                        </div>
-                        <div class="project-cta">
-                            <a href="#contact" class="btn-outline-small">Contact for Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: IT Infrastructure Automation -->
-                <div class="project-card fade-in">
-                    <div class="project-image-placeholder">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>IT Infrastructure Automation Suite</h3>
-                            <span class="project-tag">Automation</span>
-                        </div>
-                        <p class="project-problem"><strong>📌 Problem:</strong> Manual IT asset management led to 48h
-                            average resolution time and frequent oversight issues.</p>
-                        <p class="project-solution"><strong>⚙️ Solution:</strong> Developed automation suite with
-                            ManageEngine integration, PowerShell scripts, and VBA macros for real-time monitoring.</p>
-                        <p class="project-result"><strong>✅ Result:</strong> 📊 Manages 200+ assets • ⚡ 83% faster
-                            resolution (48h → 8h) • 🎯 99.2% uptime</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">PowerShell</span>
-                            <span class="tech-badge">VBA</span>
-                            <span class="tech-badge">ManageEngine</span>
-                        </div>
-                        <div class="project-cta">
-                            <a href="https://github.com/OzySx03" target="_blank" class="btn-outline-small"><i
-                                    class="fab fa-github"></i> View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Hardware Refurbishing -->
-                <div class="project-card fade-in">
-                    <div class="project-image-placeholder">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Hardware Refurbishing & Micro-Flipping</h3>
-                            <span class="project-tag">Business</span>
-                        </div>
-                        <p class="project-problem"><strong>📌 Problem:</strong> High-quality used PC components wasted
-                            due to minor issues and lack of technical expertise.</p>
-                        <p class="project-solution"><strong>⚙️ Solution:</strong> Established micro-flipping operation
-                            specializing in Ryzen/MSI platform diagnostics, repairs, and optimization.</p>
-                        <p class="project-result"><strong>✅ Result:</strong> 🔧 50+ successful builds/repairs • 💚 30%
-                            reduction in hardware failure rate • ♻️ Sustainable tech reuse</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">PC Building</span>
-                            <span class="tech-badge">Ryzen Platform</span>
-                            <span class="tech-badge">MSI Systems</span>
-                            <span class="tech-badge">Hardware Diagnostics</span>
-                        </div>
-                        <div class="project-cta">
-                            <a href="#contact" class="btn-outline-small">Request Consultation</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="contact" class="wrap section contact">
+      <p class="eyebrow">Contact</p>
+      <h2 class="contact-title">Have a role, a project or a broken machine?<br><a href="mailto:ozanemreyildiz25@gmail.com">Write to me.</a></h2>
+      <ul class="contact-links mono">
+        <li><a href="mailto:ozanemreyildiz25@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/ozanemreyildiz" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/OzySx03" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
     </section>
+  </main>
 
-    <!-- TECH STACK SECTION -->
-    <section class="tech-stack" id="tech">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Technical Toolbox</span>
-                <h2 class="section-title">Technologies & Tools</h2>
-                <p class="section-description">
-                    The core technologies and platforms I work with daily
-                </p>
-            </div>
+  <footer class="wrap foot mono muted">
+    <span>© <span id="year">2026</span> Ozan Emre Yıldız</span>
+    <span>Istanbul, TR</span>
+  </footer>
 
-            <div class="tech-stack-grid">
-                <div class="tech-item fade-in">
-                    <div class="tech-icon">
-                        <i class="fab fa-windows"></i>
-                    </div>
-                    <div class="tech-name">Windows 11 Pro</div>
-                </div>
-
-                <div class="tech-item fade-in">
-                    <div class="tech-icon">
-                        <i class="fas fa-file-excel"></i>
-                    </div>
-                    <div class="tech-name">Excel / VBA</div>
-                </div>
-
-                <div class="tech-item fade-in">
-                    <div class="tech-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="tech-name">Python</div>
-                </div>
-
-                <div class="tech-item fade-in">
-                    <div class="tech-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="tech-name">ITIL 4</div>
-                </div>
-
-                <div class="tech-item fade-in">
-                    <div class="tech-icon">
-                        <i class="fab fa-apple"></i>
-                    </div>
-                    <div class="tech-name">Apple Ecosystem</div>
-                </div>
-            </div>
-        </div><!-- CONTACT SECTION -->
-    <section class="contact" id="contact">
-        <div class="container contact-container">
-            <div class="contact-intro">
-                <span class="section-badge">Get In Touch</span>
-                <h2>Let's Build Something Efficient Together</h2>
-                <p>
-                    Whether you have a project in mind, need IT support, or just want to connect,
-                    I'd love to hear from you.
-                </p>
-            </div>
-
-            <form class="contact-form fade-in" id="contactForm"
-                action="https://formsubmit.co/ozanemreyildiz25@gmail.com" method="POST">
-                <!-- FormSubmit Configuration -->
-                <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="_honey" style="display:none">
-
-                <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com"
-                        required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" id="subject" name="_subject" class="form-input" placeholder="What's this about?"
-                        required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea id="message" name="message" class="form-textarea"
-                        placeholder="Tell me more about your project or inquiry..." required></textarea>
-                </div>
-
-                <button type="submit" class="form-button">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-            </form>
-
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/ozanemreyildiz" target="_blank" rel="noopener noreferrer"
-                    class="social-link" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/OzySx03" target="_blank" rel="noopener noreferrer" class="social-link"
-                    aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:ozanemreyildiz25@gmail.com" class="social-link" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Ozan Emre Yıldız. Built with precision and passion in Istanbul.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
-
 </html>
